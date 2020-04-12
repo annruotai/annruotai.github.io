@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://annruotai.github.io</id>
     <title>杨三岁</title>
-    <updated>2020-04-12T16:27:05.806Z</updated>
+    <updated>2020-04-12T16:37:04.060Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://annruotai.github.io"/>
     <link rel="self" href="https://annruotai.github.io/atom.xml"/>
@@ -16,75 +16,83 @@
         <link href="https://annruotai.github.io/post/springmvc-chu-li-jing-tai-zi-yuan-de-fang-shi/">
         </link>
         <updated>2020-04-12T16:13:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>##一<br>
-在web.xml中配置<br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;*.jpg&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;*.js&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;*.css&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-<code>...</code></p>
-<p>##二<br>
-web.xml中把<br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;/&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-变成<br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;</code><br>
-<code>&lt;!-- 等等其他的 --&gt;</code><br>
-<code>&lt;url-pattern&gt;*.do&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code></p>
-<p>##三<br>
-在springmvc.xml中配置<br>
-<code>&lt;!-- 配置放行静态资源--&gt;</code><br>
-<code>&lt;mvc:resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot;/&gt;</code></p>
-<p>##四<br>
-在springmvc.xml中配置<br>
-<code>&lt;mvc:default-servlet-handler /&gt;</code></p>
+        <summary type="html"><![CDATA[<h2 id="一">一</h2>
+<p>在web.xml中配置</p>
+<pre><code>&lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
+     &lt;url-pattern&gt;*.jpg&lt;/url-pattern&gt; 
+ &lt;/servlet-mapping&gt; 
+ &lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
+    &lt;url-pattern&gt;*.js&lt;/url-pattern&gt; 
+ &lt;/servlet-mapping&gt; 
+ &lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
+     &lt;url-pattern&gt;*.css&lt;/url-pattern&gt;  
+ &lt;/servlet-mapping&gt; 
+    ... 
+</code></pre>
+<h2 id="二">二</h2>
+<p>web.xml中把</p>
+<pre><code>&lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt; 
+      &lt;url-pattern&gt;/&lt;/url-pattern&gt; 
+   &lt;/servlet-mapping&gt; 
+变成
+&lt;servlet-mapping&gt; 
+    &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt; 
+ &lt;!-- 等等其他的 --&gt; 
+&lt;url-pattern&gt;*.do&lt;/url-pattern&gt; 
+&lt;/servlet-mapping&gt; 
+</code></pre>
+<h2 id="三">三</h2>
+<p>在springmvc.xml中配置</p>
+<pre><code>&lt;!--    配置放行静态资源--&gt; 
+&lt;mvc:resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot;/&gt; 
+</code></pre>
+<h2 id="四">四</h2>
+<p>在springmvc.xml中配置</p>
+<pre><code>&lt;mvc:default-servlet-handler /&gt; 
+</code></pre>
 ]]></summary>
-        <content type="html"><![CDATA[<p>##一<br>
-在web.xml中配置<br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;*.jpg&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;*.js&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;*.css&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-<code>...</code></p>
-<p>##二<br>
-web.xml中把<br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;</code><br>
-<code>&lt;url-pattern&gt;/&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code><br>
-变成<br>
-<code>&lt;servlet-mapping&gt;</code><br>
-<code>&lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt;</code><br>
-<code>&lt;!-- 等等其他的 --&gt;</code><br>
-<code>&lt;url-pattern&gt;*.do&lt;/url-pattern&gt;</code><br>
-<code>&lt;/servlet-mapping&gt;</code></p>
-<p>##三<br>
-在springmvc.xml中配置<br>
-<code>&lt;!-- 配置放行静态资源--&gt;</code><br>
-<code>&lt;mvc:resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot;/&gt;</code></p>
-<p>##四<br>
-在springmvc.xml中配置<br>
-<code>&lt;mvc:default-servlet-handler /&gt;</code></p>
+        <content type="html"><![CDATA[<h2 id="一">一</h2>
+<p>在web.xml中配置</p>
+<pre><code>&lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
+     &lt;url-pattern&gt;*.jpg&lt;/url-pattern&gt; 
+ &lt;/servlet-mapping&gt; 
+ &lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
+    &lt;url-pattern&gt;*.js&lt;/url-pattern&gt; 
+ &lt;/servlet-mapping&gt; 
+ &lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
+     &lt;url-pattern&gt;*.css&lt;/url-pattern&gt;  
+ &lt;/servlet-mapping&gt; 
+    ... 
+</code></pre>
+<h2 id="二">二</h2>
+<p>web.xml中把</p>
+<pre><code>&lt;servlet-mapping&gt; 
+     &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt; 
+      &lt;url-pattern&gt;/&lt;/url-pattern&gt; 
+   &lt;/servlet-mapping&gt; 
+变成
+&lt;servlet-mapping&gt; 
+    &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt; 
+ &lt;!-- 等等其他的 --&gt; 
+&lt;url-pattern&gt;*.do&lt;/url-pattern&gt; 
+&lt;/servlet-mapping&gt; 
+</code></pre>
+<h2 id="三">三</h2>
+<p>在springmvc.xml中配置</p>
+<pre><code>&lt;!--    配置放行静态资源--&gt; 
+&lt;mvc:resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot;/&gt; 
+</code></pre>
+<h2 id="四">四</h2>
+<p>在springmvc.xml中配置</p>
+<pre><code>&lt;mvc:default-servlet-handler /&gt; 
+</code></pre>
 <!-- more -->
 <p>在springMVC-servlet.xml中配置&lt;mvc:default-servlet-handler /&gt;后，会在Spring MVC上下文中定义一个org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler，它会<br>
 对进入DispatcherServlet的URL进行筛查，如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处理。</p>
@@ -96,53 +104,58 @@ web.xml中把<br>
         <link href="https://annruotai.github.io/post/springmvc-jsr303-shu-ju-yan-zheng-jar-bao/">
         </link>
         <updated>2020-04-12T09:37:19.000Z</updated>
-        <content type="html"><![CDATA[<p>①jar包<br>
-<code>(spring5.0.8版本的jar)...</code><br>
-<code>(hibernate5.4.0版本)</code><br>
-<code>hibernate-validator-5.4.0.Final.jar</code><br>
-<code>classmate-1.3.1.jar</code><br>
-<code>jboss-logging-3.3.0.Final.jar</code><br>
-<code>validation-api-1.1.0.Final.jar</code></p>
-<p>②Controller<br>
-<code>@Controller</code><br>
-<code>public class Jsr303Controller {</code><br>
-<code>@RequestMapping(&quot;/jsr303&quot;)</code><br>
-<code>public String jsr303(@Valid Student student , BindingResult result , Model model){</code><br>
-<code>System.out.println(student);</code><br>
-<code>if (result.hasErrors()){</code><br>
-<code>List&lt;ObjectError&gt; allErrors = result.getAllErrors();</code><br>
-<code>model.addAttribute(&quot;errors&quot; , allErrors);</code><br>
-<code>for (ObjectError allError : allErrors) {</code><br>
-<code>System.out.println(allError.getDefaultMessage());</code><br>
-<code>}</code><br>
-<code>//有错误转发到错误页面</code><br>
-<code>return &quot;error&quot;;</code><br>
-<code>}</code><br>
-<code>//没错误转发到正确页面</code><br>
-<code>return &quot;success&quot;;</code><br>
-<code>}</code><br>
-<code>}</code></p>
-<p>③Student.java<br>
-<code>public class Student {</code><br>
-<code>@NotNull(message = &quot;{stuId.NotNull}&quot;)</code><br>
-<code>@Range(max = 9999,min = 1000,message = &quot;{stuId.Range}&quot;)</code><br>
-<code>private Integer id;</code><br>
-<code>@NotNull(message = &quot;{stuName.NotNull}&quot;)</code><br>
-<code>@Length(max = 4,min = 2,message = &quot;{stuName.Length}&quot;)</code><br>
-<code>private String name;</code><br>
-<code>@DateTimeFormat(pattern = &quot;yyyy-MM-dd&quot;)</code><br>
-<code>@NotNull(message = &quot;{borndate.NotNull}&quot;)</code><br>
-<code>@Past(message = &quot;{borndate.Past}&quot;)</code><br>
-<code>private Date borndate;</code><br>
-<code>.....</code><br>
-<code>}</code></p>
-<p>④error.properties<br>
-<code>stuId.NotNull=学生ID不能为空</code><br>
-<code>stuId.Range=学生ID长度必须是四位</code><br>
-<code>stuName.NotNull=学生姓名不能为空</code><br>
-<code>stuName.Length=姓名长度不合法</code><br>
-<code>borndate.NotNull=出生日期不能为空</code><br>
-<code>borndate.Past=生日不能大于当前日期</code></p>
+        <content type="html"><![CDATA[<p>①jar包</p>
+<pre><code>(spring5.0.8版本的jar)...
+(hibernate5.4.0版本)
+hibernate-validator-5.4.0.Final.jar
+classmate-1.3.1.jar
+jboss-logging-3.3.0.Final.jar
+validation-api-1.1.0.Final.jar
+</code></pre>
+<p>②Controller</p>
+<pre><code>    @Controller
+    public class Jsr303Controller {
+        @RequestMapping(&quot;/jsr303&quot;)
+        public String jsr303(@Valid Student student , BindingResult result , Model model){
+                System.out.println(student);
+                if (result.hasErrors()){
+                    List&lt;ObjectError&gt; allErrors = result.getAllErrors();
+                    model.addAttribute(&quot;errors&quot; , allErrors);
+                    for (ObjectError allError : allErrors) {
+                    System.out.println(allError.getDefaultMessage());
+                    }
+                    //有错误转发到错误页面
+                    return &quot;error&quot;;
+                }
+                    //没错误转发到正确页面
+                return &quot;success&quot;;
+            }
+    }
+</code></pre>
+<p>③Student.java</p>
+<pre><code>        public class Student {
+                @NotNull(message = &quot;{stuId.NotNull}&quot;)
+                @Range(max = 9999,min = 1000,message = &quot;{stuId.Range}&quot;)
+                private Integer id;
+                @NotNull(message = &quot;{stuName.NotNull}&quot;)
+                @Length(max = 4,min = 2,message = &quot;{stuName.Length}&quot;)
+                private String name;
+                @DateTimeFormat(pattern = &quot;yyyy-MM-dd&quot;)
+                @NotNull(message = &quot;{borndate.NotNull}&quot;)
+                @Past(message = &quot;{borndate.Past}&quot;)
+                private Date borndate;
+                .....
+        }
+</code></pre>
+<p>④error.properties</p>
+<pre><code>    stuId.NotNull=学生ID不能为空
+    stuId.Range=学生ID长度必须是四位
+    stuName.NotNull=学生姓名不能为空
+    stuName.Length=姓名长度不合法
+    borndate.NotNull=出生日期不能为空
+    borndate.Past=生日不能大于当前日期
+    ```
+</code></pre>
 <p>⑤springmvc.xml配置</p>
 <!--    加载配置文件-->
 <pre><code>&lt;bean class=&quot;org.springframework.context.support.ReloadableResourceBundleMessageSource&quot; id=&quot;resourceBundleMessageSource&quot;&gt;
@@ -162,12 +175,15 @@ web.xml中把<br>
  <!--    注解驱动  注册-->
 <pre><code>&lt;mvc:annotation-driven validator=&quot;validatorFactoryBean&quot;/&gt;
 </code></pre>
-<p>⑥页面演示<br>
-正确<br>
-<img src="https://annruotai.github.io/post-images/1586684801585.png" alt="" loading="lazy"><br>
-错误<br>
-<img src="https://annruotai.github.io/post-images/1586684962115.png" alt="" loading="lazy"></p>
-<p>@杨三岁</p>
+<pre><code>⑥页面演示
+    正确
+    ![](https://annruotai.github.io/post-images/1586684801585.png)
+    错误
+    ![](https://annruotai.github.io/post-images/1586684962115.png)
+
+@杨三岁
+
+</code></pre>
 ]]></content>
     </entry>
 </feed>
