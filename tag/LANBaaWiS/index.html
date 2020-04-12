@@ -7,7 +7,7 @@
 <meta name="description" content="做自己喜欢做的事,可是突然之间...">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://annruotai.github.io/favicon.ico?v=1586684835322">
+<link rel="shortcut icon" href="https://annruotai.github.io/favicon.ico?v=1586684932249">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
@@ -88,82 +88,13 @@
     <p class="article-meta">
       2020-04-12
       
-        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge secondary">
+        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge ">
           编程
         </a>
       
     </p>
     <p class="text-lead">
-      <p>①jar包<br>
-(spring5.0.8版本的jar)...<br>
-(hibernate5.4.0版本)<br>
-hibernate-validator-5.4.0.Final.jar<br>
-classmate-1.3.1.jar<br>
-jboss-logging-3.3.0.Final.jar<br>
-validation-api-1.1.0.Final.jar</p>
-<p>②Controller<br>
-@Controller<br>
-public class Jsr303Controller {<br>
-@RequestMapping(&quot;/jsr303&quot;)<br>
-public String jsr303(@Valid Student student , BindingResult result , Model model){<br>
-System.out.println(student);<br>
-if (result.hasErrors()){<br>
-List<ObjectError> allErrors = result.getAllErrors();<br>
-model.addAttribute(&quot;errors&quot; , allErrors);<br>
-for (ObjectError allError : allErrors) {<br>
-System.out.println(allError.getDefaultMessage());<br>
-}<br>
-//有错误转发到错误页面<br>
-return &quot;error&quot;;<br>
-}<br>
-//没错误转发到正确页面<br>
-return &quot;success&quot;;<br>
-}<br>
-}</p>
-<p>③Student.java<br>
-public class Student {<br>
-@NotNull(message = &quot;{stuId.NotNull}&quot;)<br>
-@Range(max = 9999,min = 1000,message = &quot;{stuId.Range}&quot;)<br>
-private Integer id;<br>
-@NotNull(message = &quot;{stuName.NotNull}&quot;)<br>
-@Length(max = 4,min = 2,message = &quot;{stuName.Length}&quot;)<br>
-private String name;<br>
-@DateTimeFormat(pattern = &quot;yyyy-MM-dd&quot;)<br>
-@NotNull(message = &quot;{borndate.NotNull}&quot;)<br>
-@Past(message = &quot;{borndate.Past}&quot;)<br>
-private Date borndate;<br>
-.....<br>
-}</p>
-<p>④error.properties<br>
-stuId.NotNull=学生ID不能为空<br>
-stuId.Range=学生ID长度必须是四位<br>
-stuName.NotNull=学生姓名不能为空<br>
-stuName.Length=姓名长度不合法<br>
-borndate.NotNull=出生日期不能为空<br>
-borndate.Past=生日不能大于当前日期</p>
-<p>⑤springmvc.xml配置</p>
-<!--    加载配置文件-->
-<pre><code>&lt;bean class=&quot;org.springframework.context.support.ReloadableResourceBundleMessageSource&quot; id=&quot;resourceBundleMessageSource&quot;&gt;
-    &lt;property name=&quot;basenames&quot;&gt;
-        &lt;list&gt;
-            &lt;value&gt;classpath:error&lt;/value&gt;
-        &lt;/list&gt;
-    &lt;/property&gt;
-&lt;/bean&gt;
-</code></pre>
-<!--   把resourceBundleMessageSource注入到validatorFactoryBean -->
-<pre><code>&lt;bean class=&quot;org.springframework.validation.beanvalidation.LocalValidatorFactoryBean&quot; id=&quot;validatorFactoryBean&quot;&gt;
-    &lt;property name=&quot;providerClass&quot; value=&quot;org.hibernate.validator.HibernateValidator&quot;/&gt;
-    &lt;property name=&quot;validationMessageSource&quot; ref=&quot;resourceBundleMessageSource&quot;/&gt;
-&lt;/bean&gt;
-</code></pre>
- <!--    注解驱动  注册-->
-<pre><code>&lt;mvc:annotation-driven validator=&quot;validatorFactoryBean&quot;/&gt;
-</code></pre>
-<p>⑥页面演示<br>
-正确<br>
-<img src="https://annruotai.github.io/post-images/1586684801585.png" alt="" loading="lazy"></p>
-
+      
     </p>
     <div class="row">
       <a href="https://annruotai.github.io/post/springmvc-jsr303-shu-ju-yan-zheng-jar-bao/" class="readmore-link">
@@ -184,7 +115,7 @@ borndate.Past=生日不能大于当前日期</p>
       </div>
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
-    <img src="https://annruotai.github.io/images/avatar.png?v=1586684835322" class="no-responsive avatar">
+    <img src="https://annruotai.github.io/images/avatar.png?v=1586684932249" class="no-responsive avatar">
     <div class="text-muted">做自己喜欢做的事,可是突然之间...</div>
     <div class="social-container">
       
@@ -240,15 +171,15 @@ borndate.Past=生日不能大于当前日期</p>
     </div>
     <div class="row">
       
-        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge secondary">
+        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge warning">
           编程
         </a>
       
-        <a href="https://annruotai.github.io/tag/KlkqZxkL4/" class="badge secondary">
+        <a href="https://annruotai.github.io/tag/KlkqZxkL4/" class="badge warning">
           笔记
         </a>
       
-        <a href="https://annruotai.github.io/tag/XC6TeRfNf/" class="badge success">
+        <a href="https://annruotai.github.io/tag/XC6TeRfNf/" class="badge secondary">
           个人
         </a>
       
