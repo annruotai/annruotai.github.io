@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://annruotai.github.io</id>
     <title>杨三岁</title>
-    <updated>2020-04-12T16:37:04.060Z</updated>
+    <updated>2020-04-12T16:37:57.817Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://annruotai.github.io"/>
     <link rel="self" href="https://annruotai.github.io/atom.xml"/>
@@ -16,45 +16,6 @@
         <link href="https://annruotai.github.io/post/springmvc-chu-li-jing-tai-zi-yuan-de-fang-shi/">
         </link>
         <updated>2020-04-12T16:13:36.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="一">一</h2>
-<p>在web.xml中配置</p>
-<pre><code>&lt;servlet-mapping&gt; 
-     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
-     &lt;url-pattern&gt;*.jpg&lt;/url-pattern&gt; 
- &lt;/servlet-mapping&gt; 
- &lt;servlet-mapping&gt; 
-     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
-    &lt;url-pattern&gt;*.js&lt;/url-pattern&gt; 
- &lt;/servlet-mapping&gt; 
- &lt;servlet-mapping&gt; 
-     &lt;servlet-name&gt;default&lt;/servlet-name&gt; 
-     &lt;url-pattern&gt;*.css&lt;/url-pattern&gt;  
- &lt;/servlet-mapping&gt; 
-    ... 
-</code></pre>
-<h2 id="二">二</h2>
-<p>web.xml中把</p>
-<pre><code>&lt;servlet-mapping&gt; 
-     &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt; 
-      &lt;url-pattern&gt;/&lt;/url-pattern&gt; 
-   &lt;/servlet-mapping&gt; 
-变成
-&lt;servlet-mapping&gt; 
-    &lt;servlet-name&gt;DispatcherServlet&lt;/servlet-name&gt; 
- &lt;!-- 等等其他的 --&gt; 
-&lt;url-pattern&gt;*.do&lt;/url-pattern&gt; 
-&lt;/servlet-mapping&gt; 
-</code></pre>
-<h2 id="三">三</h2>
-<p>在springmvc.xml中配置</p>
-<pre><code>&lt;!--    配置放行静态资源--&gt; 
-&lt;mvc:resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot;/&gt; 
-</code></pre>
-<h2 id="四">四</h2>
-<p>在springmvc.xml中配置</p>
-<pre><code>&lt;mvc:default-servlet-handler /&gt; 
-</code></pre>
-]]></summary>
         <content type="html"><![CDATA[<h2 id="一">一</h2>
 <p>在web.xml中配置</p>
 <pre><code>&lt;servlet-mapping&gt; 
@@ -93,7 +54,6 @@
 <p>在springmvc.xml中配置</p>
 <pre><code>&lt;mvc:default-servlet-handler /&gt; 
 </code></pre>
-<!-- more -->
 <p>在springMVC-servlet.xml中配置&lt;mvc:default-servlet-handler /&gt;后，会在Spring MVC上下文中定义一个org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler，它会<br>
 对进入DispatcherServlet的URL进行筛查，如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处理。</p>
 ]]></content>
