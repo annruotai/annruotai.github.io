@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>杨三岁</title>
+<title>SpringMVC 处理静态资源的方式 | 杨三岁</title>
 <meta name="description" content="做自己喜欢做的事,可是突然之间...">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,6 +23,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://annruotai.github.io">杨三岁</a></h3>
@@ -76,77 +77,82 @@
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>SpringMVC 处理静态资源的方式</h1>
+            <p class="article-meta">
+              2020-04-13
+              
+                <a href="https://annruotai.github.io/tag/FEr1aQHzm/" class="badge warning">
+                  springmvc
+                </a>
+              
+                <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge secondary">
+                  编程
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p>##一<br>
+在web.xml中配置<br>
+<servlet-mapping><br>
+<servlet-name>default</servlet-name><br>
+<url-pattern><em>.jpg</url-pattern><br>
+</servlet-mapping><br>
+<servlet-mapping><br>
+<servlet-name>default</servlet-name><br>
+<url-pattern></em>.js</url-pattern><br>
+</servlet-mapping><br>
+<servlet-mapping><br>
+<servlet-name>default</servlet-name><br>
+<url-pattern>*.css</url-pattern><br>
+</servlet-mapping><br>
+...</p>
+<p>##二<br>
+web.xml中把<br>
+<servlet-mapping><br>
+<servlet-name>DispatcherServlet</servlet-name><br>
+<url-pattern>/</url-pattern><br>
+</servlet-mapping><br>
+变成<br>
+<servlet-mapping><br>
+<servlet-name>DispatcherServlet</servlet-name><br>
+<!-- 等等其他的 --><br>
+<url-pattern>*.do</url-pattern><br>
+</servlet-mapping></p>
+<p>##三<br>
+在springmvc.xml中配置<br>
+<!--    配置放行静态资源--><br>
+&lt;mvc:resources mapping=&quot;/resources/**&quot; location=&quot;/resources/&quot;/&gt;</p>
+<p>##四<br>
+在springmvc.xml中配置<br>
+&lt;mvc:default-servlet-handler /&gt;<br>
+在springMVC-servlet.xml中配置&lt;mvc:default-servlet-handler /&gt;后，会在Spring MVC上下文中定义一个org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler，它会<br>
+对进入DispatcherServlet的URL进行筛查，如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处理。</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://annruotai.github.io/post/springmvc-chu-li-jing-tai-zi-yuan-de-fang-shi/">SpringMVC 处理静态资源的方式</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-13
-      
-        <a href="https://annruotai.github.io/tag/FEr1aQHzm/" class="badge success">
-          springmvc
-        </a>
-      
-        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge success">
-          编程
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://annruotai.github.io/post/springmvc-chu-li-jing-tai-zi-yuan-de-fang-shi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://annruotai.github.io/post/springmvc-jsr303-shu-ju-yan-zheng-jar-bao/">SpringMVC JSR303数据验证</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-12
-      
-        <a href="https://annruotai.github.io/tag/FEr1aQHzm/" class="badge success">
-          springmvc
-        </a>
-      
-        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge ">
-          编程
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://annruotai.github.io/post/springmvc-jsr303-shu-ju-yan-zheng-jar-bao/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://annruotai.github.io/post/springmvc-jsr303-shu-ju-yan-zheng-jar-bao/">
+                <h3 class="post-title">
+                  SpringMVC JSR303数据验证
+                </h3>
+              </a>
+            </div>
+          
         </div>
         
-        <div class="row flex-edges">
-  
-  
-</div>
-
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://annruotai.github.io/images/avatar.png?v=1586708267107" class="no-responsive avatar">
@@ -199,11 +205,11 @@
     </div>
     <div class="row">
       
-        <a href="https://annruotai.github.io/tag/FEr1aQHzm/" class="badge ">
+        <a href="https://annruotai.github.io/tag/FEr1aQHzm/" class="badge secondary">
           springmvc
         </a>
       
-        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge secondary">
+        <a href="https://annruotai.github.io/tag/LANBaaWiS/" class="badge success">
           编程
         </a>
       
@@ -214,7 +220,9 @@
   </div>
 </div>
 
+
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
