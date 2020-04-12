@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://annruotai.github.io</id>
     <title>杨三岁</title>
-    <updated>2020-04-12T16:23:26.340Z</updated>
+    <updated>2020-04-12T16:27:05.806Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://annruotai.github.io"/>
     <link rel="self" href="https://annruotai.github.io/atom.xml"/>
@@ -97,52 +97,52 @@ web.xml中把<br>
         </link>
         <updated>2020-04-12T09:37:19.000Z</updated>
         <content type="html"><![CDATA[<p>①jar包<br>
-(spring5.0.8版本的jar)...<br>
-(hibernate5.4.0版本)<br>
-hibernate-validator-5.4.0.Final.jar<br>
-classmate-1.3.1.jar<br>
-jboss-logging-3.3.0.Final.jar<br>
-validation-api-1.1.0.Final.jar</p>
+<code>(spring5.0.8版本的jar)...</code><br>
+<code>(hibernate5.4.0版本)</code><br>
+<code>hibernate-validator-5.4.0.Final.jar</code><br>
+<code>classmate-1.3.1.jar</code><br>
+<code>jboss-logging-3.3.0.Final.jar</code><br>
+<code>validation-api-1.1.0.Final.jar</code></p>
 <p>②Controller<br>
-@Controller<br>
-public class Jsr303Controller {<br>
-@RequestMapping(&quot;/jsr303&quot;)<br>
-public String jsr303(@Valid Student student , BindingResult result , Model model){<br>
-System.out.println(student);<br>
-if (result.hasErrors()){<br>
-List<ObjectError> allErrors = result.getAllErrors();<br>
-model.addAttribute(&quot;errors&quot; , allErrors);<br>
-for (ObjectError allError : allErrors) {<br>
-System.out.println(allError.getDefaultMessage());<br>
-}<br>
-//有错误转发到错误页面<br>
-return &quot;error&quot;;<br>
-}<br>
-//没错误转发到正确页面<br>
-return &quot;success&quot;;<br>
-}<br>
-}</p>
+<code>@Controller</code><br>
+<code>public class Jsr303Controller {</code><br>
+<code>@RequestMapping(&quot;/jsr303&quot;)</code><br>
+<code>public String jsr303(@Valid Student student , BindingResult result , Model model){</code><br>
+<code>System.out.println(student);</code><br>
+<code>if (result.hasErrors()){</code><br>
+<code>List&lt;ObjectError&gt; allErrors = result.getAllErrors();</code><br>
+<code>model.addAttribute(&quot;errors&quot; , allErrors);</code><br>
+<code>for (ObjectError allError : allErrors) {</code><br>
+<code>System.out.println(allError.getDefaultMessage());</code><br>
+<code>}</code><br>
+<code>//有错误转发到错误页面</code><br>
+<code>return &quot;error&quot;;</code><br>
+<code>}</code><br>
+<code>//没错误转发到正确页面</code><br>
+<code>return &quot;success&quot;;</code><br>
+<code>}</code><br>
+<code>}</code></p>
 <p>③Student.java<br>
-public class Student {<br>
-@NotNull(message = &quot;{stuId.NotNull}&quot;)<br>
-@Range(max = 9999,min = 1000,message = &quot;{stuId.Range}&quot;)<br>
-private Integer id;<br>
-@NotNull(message = &quot;{stuName.NotNull}&quot;)<br>
-@Length(max = 4,min = 2,message = &quot;{stuName.Length}&quot;)<br>
-private String name;<br>
-@DateTimeFormat(pattern = &quot;yyyy-MM-dd&quot;)<br>
-@NotNull(message = &quot;{borndate.NotNull}&quot;)<br>
-@Past(message = &quot;{borndate.Past}&quot;)<br>
-private Date borndate;<br>
-.....<br>
-}</p>
+<code>public class Student {</code><br>
+<code>@NotNull(message = &quot;{stuId.NotNull}&quot;)</code><br>
+<code>@Range(max = 9999,min = 1000,message = &quot;{stuId.Range}&quot;)</code><br>
+<code>private Integer id;</code><br>
+<code>@NotNull(message = &quot;{stuName.NotNull}&quot;)</code><br>
+<code>@Length(max = 4,min = 2,message = &quot;{stuName.Length}&quot;)</code><br>
+<code>private String name;</code><br>
+<code>@DateTimeFormat(pattern = &quot;yyyy-MM-dd&quot;)</code><br>
+<code>@NotNull(message = &quot;{borndate.NotNull}&quot;)</code><br>
+<code>@Past(message = &quot;{borndate.Past}&quot;)</code><br>
+<code>private Date borndate;</code><br>
+<code>.....</code><br>
+<code>}</code></p>
 <p>④error.properties<br>
-stuId.NotNull=学生ID不能为空<br>
-stuId.Range=学生ID长度必须是四位<br>
-stuName.NotNull=学生姓名不能为空<br>
-stuName.Length=姓名长度不合法<br>
-borndate.NotNull=出生日期不能为空<br>
-borndate.Past=生日不能大于当前日期</p>
+<code>stuId.NotNull=学生ID不能为空</code><br>
+<code>stuId.Range=学生ID长度必须是四位</code><br>
+<code>stuName.NotNull=学生姓名不能为空</code><br>
+<code>stuName.Length=姓名长度不合法</code><br>
+<code>borndate.NotNull=出生日期不能为空</code><br>
+<code>borndate.Past=生日不能大于当前日期</code></p>
 <p>⑤springmvc.xml配置</p>
 <!--    加载配置文件-->
 <pre><code>&lt;bean class=&quot;org.springframework.context.support.ReloadableResourceBundleMessageSource&quot; id=&quot;resourceBundleMessageSource&quot;&gt;
