@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://annruotai.github.io</id>
     <title>杨三岁</title>
-    <updated>2020-04-12T16:43:27.051Z</updated>
+    <updated>2020-04-12T16:44:18.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://annruotai.github.io"/>
     <link rel="self" href="https://annruotai.github.io/atom.xml"/>
@@ -56,6 +56,7 @@
 </code></pre>
 <p>在springMVC-servlet.xml中配置&lt;mvc:default-servlet-handler /&gt;后，会在Spring MVC上下文中定义一个org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler，它会<br>
 对进入DispatcherServlet的URL进行筛查，如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处理。</p>
+<p>@杨三岁</p>
 ]]></content>
     </entry>
     <entry>
